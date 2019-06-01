@@ -1,0 +1,35 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fiercecom Incorporated</title>
+    <link rel="icon" href="{% static 'fierce.png' %}" type="image/icon type">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+
+  <body>
+    <div class="wrapper" >
+      <h1>
+          <img src="{% static 'j.png' %}" class="center"  style="width:100%;">
+          <nav>
+                <li>
+                  <a class="home" href="{% url 'exam:exam_start'%}"
+                  style="position: absolute;
+                  top: 50px;
+                  right: 650px;
+                  border: 2px solid green;
+                  padding: 10px;
+                  border-radius: 10px;
+                  color: black;
+                  font-size: 15px">Click here to start</a>
+                </li>
+          </nav>
+      </h1>
+      {% block content %}
+
+      {% endblock %}
+
+    </div>
+  </body>
+</html>
